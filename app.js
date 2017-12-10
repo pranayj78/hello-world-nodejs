@@ -1,13 +1,17 @@
-var http = require('http');
- 
-// Configure our HTTP server to respond with Hello World to all requests.
-	var server = http.createServer(function (request, response) {
-   response.writeHead(200, {"Content-Type": "text/plain"});
-     response.end("Hello World");
-     });
-      
-//      // Listen on port 8000, IP defaults to "0.0.0.0"
-      server.listen(8000);
-//       
-//       // Put a friendly message on the terminal
-       console.log("Server running at http://127.0.0.1:8000/");
+'use strict';
+
+const express = require('express');
+
+// Constants
+const PORT = 8000;
+const HOST = '0.0.0.0';
+
+// App
+const app = express();
+app.get('/hello-world-nodejs', (req, res) => {
+  res.send('Hello world\n');
+});
+
+app.listen(PORT, HOST);
+console.log(`Running on http://${HOST}:${PORT}`);
+
