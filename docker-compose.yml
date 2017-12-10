@@ -1,0 +1,4 @@
+helloworldnodejs:
+  build: .
+  ports:
+    - "0:8000"

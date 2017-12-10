@@ -1,0 +1,4 @@
+helloworldnodejs:
+  image: dockercloud/hello-world-nodejs
+  ports:
+    - "0:8000"
